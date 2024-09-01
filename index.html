@@ -55,7 +55,8 @@
         <p>Dress code: Be yourself</p>
     </div>
     <script>
-        document.getElementById("clickMeLink").addEventListener('click', function() {
+        document.getElementById("clickMeLink").addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the anchor tag
             var popup = document.getElementById("popup");
             var response1 = document.getElementById("response1");
             var response2 = document.getElementById("response2");
@@ -66,7 +67,6 @@
             response1.style.display = "block";
             response2.style.display = "block";
 
-            // Add event listeners to the response boxes
             response1.addEventListener('click', function() {
                 meetingDetails.style.display = "block";
                 dressCode.style.display = "block";
