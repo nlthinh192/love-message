@@ -40,7 +40,7 @@
 </head>
 <body>
     <h1>Will you be my date, Habo?</h1>
-    <a href="https://nlthinh192.github.io/love-message/index.html" onclick="showPopup()">Click me</a>
+    <a href="https://nlthinh192.github.io/love-message/index.html" id="clickMeLink">Click me</a>
     <div id="popup">
         May I have the pleasure to meet my princess tomorrow night?
     </div>
@@ -55,7 +55,7 @@
         <p>Dress code: Be yourself</p>
     </div>
     <script>
-        function showPopup() {
+        document.getElementById("clickMeLink").addEventListener('click', function() {
             var popup = document.getElementById("popup");
             var response1 = document.getElementById("response1");
             var response2 = document.getElementById("response2");
@@ -76,7 +76,7 @@
                 meetingDetails.style.display = "block";
                 dressCode.style.display = "block";
             });
-        }
+        });
     </script>
 </body>
 </html>
